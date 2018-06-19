@@ -51,7 +51,7 @@ Public Class Home
             Dim dialog As New FolderBrowserDialog()
             dialog.RootFolder = Environment.SpecialFolder.Desktop
             dialog.Description = "Select a folder to save the generated paper wallet."
-            If dialog.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            If dialog.ShowDialog() = DialogResult.OK Then
                 Dim cpath As String = dialog.SelectedPath & "\" & AccountRS & ".pdf"
                 pdf.Save(cpath)
                 Process.Start(cpath)
