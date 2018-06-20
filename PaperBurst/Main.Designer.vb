@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Home
     Inherits System.Windows.Forms.Form
 
     'Form remplace la méthode Dispose pour nettoyer la liste des composants.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Home
     'REMARQUE : la procédure suivante est requise par le Concepteur Windows Form
     'Elle peut être modifiée à l'aide du Concepteur Windows Form.  
     'Ne la modifiez pas à l'aide de l'éditeur de code.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Home))
         Me.Generate = New System.Windows.Forms.Button()
@@ -29,7 +29,6 @@ Partial Class Home
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.revealPK = New System.Windows.Forms.PictureBox()
         Me.revealPwd = New System.Windows.Forms.PictureBox()
-        Me.Recalculate = New System.Windows.Forms.Button()
         Me.ReedSolomonAddress = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PrivateKey1 = New System.Windows.Forms.TextBox()
@@ -47,7 +46,7 @@ Partial Class Home
         '
         'Generate
         '
-        Me.Generate.Location = New System.Drawing.Point(832, 480)
+        Me.Generate.Location = New System.Drawing.Point(832, 455)
         Me.Generate.Name = "Generate"
         Me.Generate.Size = New System.Drawing.Size(327, 83)
         Me.Generate.TabIndex = 8
@@ -66,7 +65,7 @@ Partial Class Home
         '
         'GeneratePassphrase
         '
-        Me.GeneratePassphrase.Location = New System.Drawing.Point(33, 480)
+        Me.GeneratePassphrase.Location = New System.Drawing.Point(457, 455)
         Me.GeneratePassphrase.Name = "GeneratePassphrase"
         Me.GeneratePassphrase.Size = New System.Drawing.Size(327, 83)
         Me.GeneratePassphrase.TabIndex = 17
@@ -77,7 +76,6 @@ Partial Class Home
         '
         Me.GroupBox1.Controls.Add(Me.revealPK)
         Me.GroupBox1.Controls.Add(Me.revealPwd)
-        Me.GroupBox1.Controls.Add(Me.Recalculate)
         Me.GroupBox1.Controls.Add(Me.ReedSolomonAddress)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.PrivateKey1)
@@ -93,7 +91,7 @@ Partial Class Home
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Location = New System.Drawing.Point(22, 29)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1190, 588)
+        Me.GroupBox1.Size = New System.Drawing.Size(1190, 570)
         Me.GroupBox1.TabIndex = 18
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Settings"
@@ -121,15 +119,6 @@ Partial Class Home
         Me.revealPwd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.revealPwd.TabIndex = 28
         Me.revealPwd.TabStop = False
-        '
-        'Recalculate
-        '
-        Me.Recalculate.Location = New System.Drawing.Point(433, 480)
-        Me.Recalculate.Name = "Recalculate"
-        Me.Recalculate.Size = New System.Drawing.Size(327, 83)
-        Me.Recalculate.TabIndex = 24
-        Me.Recalculate.Text = "Calculate PublicKey, PrivateKey, RS"
-        Me.Recalculate.UseVisualStyleBackColor = True
         '
         'ReedSolomonAddress
         '
@@ -234,7 +223,7 @@ Partial Class Home
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(1237, 641)
+        Me.ClientSize = New System.Drawing.Size(1233, 620)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -262,7 +251,6 @@ Partial Class Home
     Friend WithEvents Label2 As Label
     Friend WithEvents ReedSolomonAddress As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents Recalculate As Button
     Friend WithEvents revealPK As PictureBox
     Friend WithEvents revealPwd As PictureBox
 End Class

@@ -145,7 +145,7 @@ Public Class Home
         Next
         Return HexString
     End Function
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Recalculate.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
         Dim KeySeed As String = ""
         Dim curwords As String = ""
         Dim AccountID As String
@@ -232,4 +232,36 @@ Public Class Home
 
     End Sub
 
+    Private Sub Passphrase_TextChanged(sender As Object, e As EventArgs) Handles Passphrase.TextChanged
+        Dim KeySeed As String = ""
+        Dim curwords As String = ""
+        Dim PrivateKey As Byte()
+        Dim PublicKey As Byte()
+        Dim PublicKeyHash As Byte()
+
+        KeySeed = Passphrase.Text
+        Dim cSHA256 As SHA256 = SHA256Managed.Create()
+
+        'create private key
+        PrivateKey = cSHA256.ComputeHash(System.Text.Encoding.UTF8.GetBytes(KeySeed))
+        PrivateKey1.Text = BytesToHexString(PrivateKey)
+
+        'create public key
+        PublicKey = Curve25519.GetPublicKey(PrivateKey)
+        PublicKey1.Text = BytesToHexString(PublicKey)
+
+        'create public key hash
+        PublicKeyHash = cSHA256.ComputeHash(PublicKey)
+
+        'create numeric account id
+        Dim b = New Byte() {PublicKeyHash(0), PublicKeyHash(1), PublicKeyHash(2), PublicKeyHash(3), PublicKeyHash(4), PublicKeyHash(5), PublicKeyHash(6), PublicKeyHash(7)}
+        If (b(b.Length - 1) And &H80) <> 0 Then
+            Array.Resize(Of Byte)(b, b.Length + 1)
+        End If
+        Dim Bint As New BigInteger(b)
+
+        'Create RS-Address
+        ReedSolomonAddress.Text = "BURST-" & ReedSolomon.encode(Bint.ToString)
+
+    End Sub
 End Class
