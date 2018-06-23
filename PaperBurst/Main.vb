@@ -35,7 +35,7 @@ Public Class Home
         For i As Integer = 1 To 1
             strings.Add(RandomString(r))
         Next
-        For i As Integer = 1 To 3
+        For i As Integer = 1 To 4
             strings2.Add(RandomString(r))
         Next
 
@@ -240,7 +240,7 @@ Public Class Home
         Dim docRenderer As DocumentRenderer = New DocumentRenderer(doc)
 
         docRenderer.PrepareDocument()
-        docRenderer.RenderObject(graph, XUnit.FromCentimeter(16), XUnit.FromCentimeter(14.735), XUnit.FromCentimeter(1), table)
+        docRenderer.RenderObject(graph, XUnit.FromCentimeter(16), XUnit.FromCentimeter(14.69), XUnit.FromCentimeter(1), table)
 
     End Sub
     Private Sub revealPwd_Click(sender As Object, e As EventArgs) Handles revealPwd.Click
