@@ -117,6 +117,17 @@ Public Class Home
             graph.DrawString("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", font, XBrushes.Black, XUnit.FromCentimeter(0.775), XUnit.FromCentimeter(15.915))
             graph.DrawString("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", font, XBrushes.Black, XUnit.FromCentimeter(0.775), XUnit.FromCentimeter(16.015))
 
+            'Creating a second pdf page
+            Dim pdfPage2 As PdfPage = pdf.AddPage
+            Dim graph2 As XGraphics = XGraphics.FromPdfPage(pdfPage2)
+            pdfPage2.Orientation = PageOrientation.Landscape
+            pdfPage2.Width = XUnit.FromCentimeter(29.7)
+            pdfPage2.Height = XUnit.FromCentimeter(21)
+
+            'Adding instructions
+            Dim instructions As Image = My.Resources.Instructions
+            graph2.DrawImage(instructions, XUnit.FromCentimeter(0), XUnit.FromCentimeter(0), XUnit.FromCentimeter(29.7), XUnit.FromCentimeter(21))
+
             Dim dialog As New FolderBrowserDialog()
             dialog.RootFolder = Environment.SpecialFolder.Desktop
             dialog.Description = "Select a folder to save the generated paper wallet."
@@ -226,7 +237,7 @@ Public Class Home
 
         Dim table As Table = New Table()
 
-        Dim column As Column = table.AddColumn(Unit.FromCentimeter(5))
+        Dim column As Column = table.AddColumn(Unit.FromCentimeter(5.5))
         column.Format.Alignment = ParagraphAlignment.Center
 
         Dim row As Row = table.AddRow()
@@ -240,7 +251,7 @@ Public Class Home
         Dim docRenderer As DocumentRenderer = New DocumentRenderer(doc)
 
         docRenderer.PrepareDocument()
-        docRenderer.RenderObject(graph, XUnit.FromCentimeter(16), XUnit.FromCentimeter(14.69), XUnit.FromCentimeter(1), table)
+        docRenderer.RenderObject(graph, XUnit.FromCentimeter(15.775), XUnit.FromCentimeter(14.69), XUnit.FromCentimeter(1), table)
 
     End Sub
     Private Sub revealPwd_Click(sender As Object, e As EventArgs) Handles revealPwd.Click
