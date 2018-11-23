@@ -1,0 +1,26 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PaperBurst"
+        mc:Ignorable="d"
+        Title="PaperBurst" Height="384.286" Width="754.286" Background="#FF262626" Foreground="White" ResizeMode="NoResize" Icon="icon.ico">
+    <Grid x:Name="mainWindow" Background="#FF262626">
+        <GroupBox Header="Settings" HorizontalAlignment="Left" Height="276" Margin="10,10,0,0" VerticalAlignment="Top" Width="729">
+            <TextBox x:Name="Passphrase" HorizontalAlignment="Left" Height="23" Margin="151,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="553" BorderBrush="#FF262626" CharacterCasing="Lower"/>
+        </GroupBox>
+        <Label Content="Number of words :" HorizontalAlignment="Left" Margin="30,40,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <RadioButton x:Name="RadioButton1" Content="12 words" HorizontalAlignment="Left" Margin="165,46,0,0" VerticalAlignment="Top" Foreground="White" IsChecked="True"/>
+        <RadioButton x:Name="RadioButton2" Content="24 words" HorizontalAlignment="Left" Margin="269,46,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Passphrase :" HorizontalAlignment="Left" Margin="30,81,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox x:Name="PrivateKey1" HorizontalAlignment="Left" Height="23" Margin="167,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="553" Background="White" BorderBrush="#FF262626" MaxLength="1" IsReadOnly="True" AcceptsTab="True" AutoWordSelection="True" CharacterCasing="Lower"/>
+        <Label Content="Private Key :" HorizontalAlignment="Left" Margin="30,134,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Public Key :" HorizontalAlignment="Left" Margin="30,184,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox x:Name="PublicKey1" HorizontalAlignment="Left" Height="23" Margin="167,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="553" Background="White" BorderBrush="#FF262626" IsReadOnly="True" AcceptsTab="True" AutoWordSelection="True" CharacterCasing="Lower"/>
+        <Label Content="Reed Solomon :" HorizontalAlignment="Left" Margin="30,240,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox x:Name="ReedSolomonAddress" HorizontalAlignment="Left" Height="23" Margin="167,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="553" Background="White" BorderBrush="#FF262626" IsReadOnly="True" AcceptsTab="True" AutoWordSelection="True" CharacterCasing="Upper"/>
+        <Button x:Name="generatePassphrase" Content="Generate new passphrase" HorizontalAlignment="Left" Margin="203,305,0,0" VerticalAlignment="Top" Width="157" BorderBrush="#FF262626" Background="White" Height="33"/>
+        <Button x:Name="generatePaperWallet" Content="Generate paper wallet !" HorizontalAlignment="Left" Margin="386,305,0,0" VerticalAlignment="Top" Width="157" BorderBrush="#FF262626" Background="White" Height="33"/>
+    </Grid>
+</Window>

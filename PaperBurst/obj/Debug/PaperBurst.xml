@@ -1,0 +1,93 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+PaperBurst
+</name>
+</assembly>
+<members>
+<member name="T:PaperBurst.My.MyWpfExtension">
+ <summary>
+ Module utilisé pour définir les propriétés qui sont disponibles dans l'espace de noms My pour WPF
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:PaperBurst.My.MyWpfExtension.Application">
+ <summary>
+ Retourne l'objet application pour l'application en cours d'exécution
+ </summary>
+</member>
+<member name="P:PaperBurst.My.MyWpfExtension.Computer">
+ <summary>
+ Retourne les informations relatives à l'ordinateur hôte.
+ </summary>
+</member>
+<member name="P:PaperBurst.My.MyWpfExtension.User">
+ <summary>
+ Retourne les informations relatives à l'utilisateur actuel.  Si vous souhaitez exécuter l'application avec les 
+ informations d'identification de l'utilisateur Windows, appelez My.User.InitializeWithWindowsUser().
+ </summary>
+</member>
+<member name="P:PaperBurst.My.MyWpfExtension.Log">
+ <summary>
+ Retourne le journal des applications. L'écouteur peut être configuré par le fichier de configuration de l'application.
+ </summary>
+</member>
+<member name="P:PaperBurst.My.MyWpfExtension.Windows">
+ <summary>
+ Retourne la collection de fenêtres définie dans le projet.
+ </summary>
+</member>
+<member name="T:PaperBurst.My.Resources.Resources">
+<summary>
+  Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+</summary>
+</member>
+<member name="P:PaperBurst.My.Resources.Resources.ResourceManager">
+<summary>
+  Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+</summary>
+</member>
+<member name="P:PaperBurst.My.Resources.Resources.Culture">
+<summary>
+  Remplace la propriété CurrentUICulture du thread actuel pour toutes
+  les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+</summary>
+</member>
+<member name="P:PaperBurst.My.Resources.Resources.Backg">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PaperBurst.My.Resources.Resources.Instructions">
+<summary>
+  Recherche une ressource localisée de type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:PaperBurst.Application">
+<summary>
+Application
+</summary>
+</member>
+<member name="M:PaperBurst.Application.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="M:PaperBurst.Application.Main">
+<summary>
+Application Entry Point.
+</summary>
+</member>
+<member name="T:PaperBurst.MainWindow">
+<summary>
+MainWindow
+</summary>
+</member>
+<member name="M:PaperBurst.MainWindow.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+</members>
+</doc>

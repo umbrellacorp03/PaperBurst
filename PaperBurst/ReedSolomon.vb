@@ -1,4 +1,5 @@
-﻿Imports System.Numerics
+﻿Imports System.Numerics.BigInteger
+
 Public Class ReedSolomon
 
     Private Shared ReadOnly initial_codeword = New Integer() {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
@@ -131,8 +132,8 @@ Public Class ReedSolomon
 
         Loop While length > 0
 
-        Dim bigInt As New BigInteger
-        bigInt = BigInteger.Parse(plain_string_builder)
+        Dim bigInt As New Numerics.BigInteger
+        bigInt = Parse(plain_string_builder)
         Dim retval As ULong = bigInt
 
         Return retval
@@ -168,14 +169,5 @@ Public Class ReedSolomon
         Else
             Return False
         End If
-
-
     End Function
-
-
-
-
-
-
-
 End Class
