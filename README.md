@@ -13,7 +13,7 @@ Be careful : if your password is a long string or isn't a 12 or 24 words passphr
 Finally, if the wallet was generated using PaperBurst, don't forget to activate it (ie. creating an outgoing transaction from your new wallet to share its publickey to the rest of the network)
 
 # Roadmap
-- Encrypted paper wallets, and unecrypt them using PaperBurst
+- Encrypted paper wallets, and decrypt them using PaperBurst
 - Improve security
 - Make PaperBurst Less resource consuming
 - Adding the possibility to type your own passphrase (long string and not separate words)
